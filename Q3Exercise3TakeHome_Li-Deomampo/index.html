@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number breakdown</title>
+</head>
+<body>
+    <p id="r"></p>
+    <p id="br"></p>
+    <p id="gr"></p>
+
+    <script>
+        let x=Math.round(Math.random()*1001);
+        document.getElementById("r").innerHTML="Randomly generated number: " + x;
+        var y=Math.floor(x/100)*100;
+        var a=Math.floor(x%10);
+        var z=Math.floor(x%100)-a;
+        document.getElementById("br").innerHTML="Breakdown: "+ y + " " + z + " " + a;
+
+        var date=new Date();
+        document.getElementById("gr").innerHTML="Date today: " + date;
+    </script>
+</body>
+</html>
